@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<body>
+<div class="Resume" id="home">
+    <div class="Resume__container">
+    <h2 class="Resume__heading">The Best Online CV Maker <span>KamiResume</span></h2>
+    <p class="Resume__description">CV writing made fast, stress-free, and satisfying. Just let US lead the way. </p>
+    <button class="main__btn"><a href="{% url 'main'%}">CREATE YOUR CV NOW</a></button>
+    </div>
+</div>
+
+<div class="main__content">
+          <h1>What do we do?</h1>
+          <h2>We help Job Seekers to Stand Out of Crowd</h2>
+          <p>Contact us to learn more about our services</p>
+          <button class="main__btn"><a href="{% url 'about' %}">Contact US</a></button>
+</div>
+</body>
+
+{% endblock content %}
+
+</html>

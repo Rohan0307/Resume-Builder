@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block content %}
+  <body class="bgcolor">
+    
+    <h1 style="font-family: Georgia, sans-serif;
+    font-size: 5em;
+    letter-spacing: -2px;text-align: center;margin-top: 1rem;">FORMATS</h1>
+    <h3 style="font-family: Georgia, sans-serif;
+    font-size: 2em;
+    letter-spacing: -2px;text-align: center;margin-top: 1rem;">Choose from different formats shown below</h3>
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" style="width: 500px;text-align: center;margin-left: 50%;margin-top: 75px;transform: translate(-50%);">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner " >
+        <div class="carousel-item active">
+          <a href="{% url 'format1' %}">
+          <img src="{% static 'format1.png'%}" class="d-block w-100" alt="...">
+        </a>
+          <div class="carousel-caption d-none d-md-block">
+            <h5 style="color: black;">Template 1</h5>
+            
+          </div>
+        </div>
+        <div class="carousel-item">
+          <a href="{% url 'format2' %}">
+            <img src="{% static 'format2.png'%}" class="d-block w-100" alt="...">
+          </a>
+          <div class="carousel-caption d-none d-md-block">
+            <h5 style="color: black;">Template 2</h5>
+            
+          </div>
+        </div>
+        <div class="carousel-item"><a href="{% url 'format3' %}">
+          <img src="{% static 'format3.png'%}" class="d-block w-100" alt="...">
+        </a>
+       
+          <div class="carousel-caption d-none d-md-block">
+            <h5 style="color: black;">Template 3</h5>
+            
+          </div>
+          
+        </div>
+        <div class="carousel-item"><a href="{% url 'format4' %}">
+          <img src="{% static 'format4.png'%}" class="d-block w-100" alt="...">
+        </a>
+       
+          <div class="carousel-caption d-none d-md-block">
+            <h5 style="color: black;">Template 4</h5>
+            
+          </div>
+          
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+  </body>
+{% endblock content %}
+
+</html>

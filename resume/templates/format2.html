@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<body>
+
+<div class="container", id = 'cv-template'>
+  <div class="row">
+    <div class = "col-md-4 py-5 background2">
+      <!--first column-->
+      <div class="text-right">
+        <div id="profile-container">
+          <image id="profileImage" src="{{data.image.url}}">
+       </div>
+       <input id="imageUpload" type="file" 
+              name="profile_photo" placeholder="Photo" required="" capture>
+      </div>
+
+      <div class="container">
+        <h4 class="format2-head">Personal Info</h4>
+        <p id ="nameT1">{{data.name}}</p>
+        <p id ="contactT">{{data.contact}}</p>
+        <p id ="addressT">{{data.address}}</p>
+      </div>
+
+      <div class="container">
+        <h4 class="format2-head">Social Links</h4>
+        <p id ="mailT">{{data.email}}</p>
+        <p id ="instaT">{{data.insta}}</p>
+        <p id ="linkedT"><{{data.linkedln}}/p>
+        <p id ="gitT">{{data.github}}</p>
+      </div>
+
+
+
+      <!--Skills-->
+      <div>
+        <h4 class="format2-head" >
+          Skills
+        </h4>
+         <ul>
+           <li id="skill1">{{data.skill1}}abc
+           </li>
+           <li id="skill2">{{data.skill2}}xyx
+           </li>
+           <li id="skill3">{{data.skill3}}abc
+           </li>
+           <li id="skill4">{{data.skill4}}xyx
+           </li>
+         </ul>
+      </div>
+
+    </div>
+
+    <div class = "col-md-8 py-5">
+      <div>
+        <h2 id ="nameT2">{{data.name}}</h2>
+      </div>
+      <!--second column-->
+      
+        <div class="format2-head">
+          <h4>
+            Objective
+          </h4>
+        </div>
+        <div class="mt-1 mb-3">
+          <p id="objectiveT">{{data.objective}}
+          </p>
+        </div>
+
+
+      <!--Work-->
+      
+        <div class="format2-head">
+          <h4>
+            Work Experience
+          </h4>
+          
+        </div>
+        <div class="mt-1 mb-3">
+           <ul id = "weT">
+             <li>{{data.work1}}</li>
+             <li>{{data.work2}}</li>
+           </ul>
+        </div>
+   
+
+      <!--Academic-->
+    
+        <div class="format2-head">
+          <h4>
+            Academic Qualification
+          </h4>
+        </div>
+        <div class="mt-1 mb-3">
+          <ul id="aqT">
+            <li>{{data.edu1}}</li>
+            <li>{{data.edu2}}</li>
+          </ul>
+        </div>
+   
+
+      <!--Intrests and hobbies-->
+
+        <div class="format2-head">
+          <h4>
+            Hobbies
+          </h4>
+        </div>
+        <div class="mt-1 mb-3">
+           <ul id = "ihT">
+             <li>{{data.ih1}}</li>
+             <li>{{data.ih2}}</li>
+           </ul>
+        </div>
+
+
+      <!--references-->
+      
+        <div class="format2-head">
+          <h4>
+            Extra Curricular
+          </h4>
+        </div>
+        <div class="mt-1 mb-3">
+           <ul id = "refT">
+             <li>{{data.ref}}</li>
+           </ul>
+        </div>
+      
+
+    </div>
+  </div>
+
+</div>
+
+</div>
+    
+    <div class="container text-center mt-3">
+      <button onclick="printCV('cv-template')" class="btn btn-dark btn-lg">Print CV</button>
+    </div>
+
+</body>
+{% endblock content %}
+
+</html>

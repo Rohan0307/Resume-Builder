@@ -1,0 +1,92 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="{% static 'resume.css' %}">
+  <link rel="stylesheet" href="{% static 'style.css' %}" >
+  <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    <!-- Navbar Section -->
+  <nav class="navbar">
+    <div class="navbar__container">
+      <a href="#home" id="navbar__logo">KamiResume</a>
+      <div class="navbar__toggle" id="mobile-menu">
+        <span class="bar"></span> <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="navbar__menu">
+        <li class="navbar__item">
+          <a href="{% url 'home' %}" class="navbar__links" id="home-page">Home</a>
+        </li>
+        <li class="navbar__item">
+          <a href="{% url 'about' %}" class="navbar__links" id="about-page">About</a>
+        </li>
+        <li class="navbar__item">
+          <a href="{% url 'policy' %}" class="navbar__links" id="Teams-page">Policy</a >
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+    {% block content %}{% endblock content %}
+
+    <!-- Footer Section -->
+  <div class="footer__container">
+
+    <section class="social__media">
+      <div class="social__media--wrap">
+        
+        <p class="website__rights">© KAMINARIMON 2021. All rights reserved</p>
+
+      <div class="footer__about">
+          <a href="homepage.html#about" >About us</a>
+
+          <a href="{% url 'tnc' %}" >Terms & Conditions</a>
+
+          <a href="{% url 'policy' %}" >Privacy policy</a>
+
+        </div> 
+
+
+        <div class="social__icons">
+          
+          <a href="https://www.instagram.com/sahutechnologies/" class="social__icon--link"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          
+          <a href="https://www.linkedin.com/company/sahutechnologies/" class="social__icon--link"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="https://twitter.com/sahootech" class="social__icon--link"
+            ><i class="fab fa-twitter"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  </div>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+    crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    new Darkmode().showWidget();
+  }
+  window.addEventListener('load', addDarkmodeWidget);
+</script>
+
+</html>
